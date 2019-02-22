@@ -2,9 +2,11 @@
 session_start();
 require_once 'ApisServices.php';
 $token=null;
-if(isset($_SESSION["token"]))
+$key=null;
+if(isset($_SESSION["token"]) && isset($_SESSION["key"]))
 {
     $token=$_SESSION["token"];
+    $key=$_SESSION["key"];
 }
 else
 {
@@ -13,13 +15,13 @@ else
 $trello=new TrelloApi();
 if(isset($_POST["delete"]) && isset($_POST["id"]))
 {
-    $trello->DeleteBoard($_POST["id"],$token);
+    $trello->DeleteBoard($_POST["id"],$token,$key);
 }
 if(isset($_POST["board_color"]) && isset($_POST["board_name"]))
 {
-    $created=$trello->CreateBoard($_POST["board_name"],$_POST["board_color"],$token);
+    $created=$trello->CreateBoard($_POST["board_name"],$_POST["board_color"],$token,$key);
 }
-$boards=$trello->getAllBoards($token);
+$boards=$trello->getAllBoards($token,$key);
 ?>
 <!DOCTYPE html>
 <html>

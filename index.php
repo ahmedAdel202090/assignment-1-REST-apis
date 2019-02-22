@@ -1,5 +1,11 @@
 <?php
 session_start();
+if(isset($_POST["key"]))
+{
+  $_SESSION["key"]=$_POST["key"];
+  $url_token="https://trello.com/1/authorize?expiration=1day&name=MyPersonalToken&scope=read,write,account&response_type=token&key={$_SESSION['key']}8&return_url=http://localhost/assignment%201-REST%20apis/approve_token.html&name=Calender-app";
+  header("location:".$url_token);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,17 +18,21 @@ session_start();
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-grid.min.css" />
 </head>
 <body style="background-color:rgba(228, 228, 228, 0.637);">
-    <section style="margin: auto;margin-top:10% ;background-color:white;height: 200px; width: 400px;padding: 20px;">
+    <section style="margin: auto;margin-top:10% ;background-color:white;height: 200px; width: 600px;padding:16px;">
         <h5>Welcome to Our Application</h5>
         <br/>
         <?php
-          if(isset($_SESSION["token"]))
+          if(isset($_SESSION["token"]) && isset($_SESSION["key"]))
           {
             echo '<a class="btn btn-success" href="calender.php">Trello Calender</a>'; 
           }
           else{
-              echo '<a class="btn btn-success" href="https://trello.com/1/authorize?expiration=1day&name=MyPersonalToken&scope=read,write,account&response_type=token&key=4cb33169640f5a1b21a97634f73a3ec8&return_url=http://localhost/sw/approve_token.html&name=Calender-app
-              "> Trello Calender </a>';
+              echo '<form method="POST" action="">
+              <input type="text" name="key" placeholder="enter your api key" />
+              <button class="btn btn-success" type="submit" >submit key</button>
+              <a class="btn btn-primary" href="https://trello.com/app-key" >get your api key</a>
+              </form>
+              ';
           }
         ?>
         <br/><br/>

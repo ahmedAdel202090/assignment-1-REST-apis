@@ -3,9 +3,9 @@ require_once 'vendor/autoload.php';
 require_once ("weatherandazanDesign.php");
 class TrelloApi
 {
-    function getAllBoards($token)
+    function getAllBoards($token,$key)
     {
-        $url="https://api.trello.com/1/members/me/boards?fields=name,id,url&key=4cb33169640f5a1b21a97634f73a3ec8&token={$token}";
+        $url="https://api.trello.com/1/members/me/boards?fields=name,id,url&key={$key}&token={$token}";
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -25,10 +25,10 @@ class TrelloApi
         return $result;
 
     }
-    function CreateBoard($name,$color,$token)
+    function CreateBoard($name,$color,$token,$key)
     {
         $name=urlencode($name);
-        $url="https://api.trello.com/1/boards/?name={$name}&defaultLabels=true&defaultLists=true&keepFromSource=none&prefs_permissionLevel=private&prefs_voting=disabled&prefs_comments=members&prefs_invitations=members&prefs_selfJoin=true&prefs_cardCovers=true&prefs_background={$color}&prefs_cardAging=regular&key=4cb33169640f5a1b21a97634f73a3ec8&token={$token}";
+        $url="https://api.trello.com/1/boards/?name={$name}&defaultLabels=true&defaultLists=true&keepFromSource=none&prefs_permissionLevel=private&prefs_voting=disabled&prefs_comments=members&prefs_invitations=members&prefs_selfJoin=true&prefs_cardCovers=true&prefs_background={$color}&prefs_cardAging=regular&key={$key}&token={$token}";
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_POST, 1);
         curl_setopt_array($curl, array(
@@ -51,9 +51,9 @@ class TrelloApi
         }
         return true;
     }
-    function DeleteBoard($id,$token)
+    function DeleteBoard($id,$token,$key)
     {
-        $url="https://api.trello.com/1/boards/{$id}?key=4cb33169640f5a1b21a97634f73a3ec8&token={$token}";
+        $url="https://api.trello.com/1/boards/{$id}?key={$key}&token={$token}";
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
