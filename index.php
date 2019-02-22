@@ -3,7 +3,7 @@ session_start();
 if(isset($_POST["key"]))
 {
   $_SESSION["key"]=$_POST["key"];
-  $url_token="https://trello.com/1/authorize?expiration=1day&name=MyPersonalToken&scope=read&response_type=token&key={$_SESSION['key']}&return_url=http://localhost/".urlencode("assignment 1-REST apis")."/approve_token.html&name=Calender-app";
+  $url_token="https://trello.com/1/authorize?expiration=1day&name=MyPersonalToken&scope=read,write,account&response_type=token&key={$_SESSION['key']}&return_url=http://localhost/".urlencode("assignment 1-REST apis")."/approve_token.html&name=Calender-app";
   header("location:".$url_token);
 }
 ?>

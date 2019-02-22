@@ -1,2 +1,0 @@
-contries: https://restcountries.eu/#filter-response
-prayer times:https://rapidapi.com/meezaan/api/prayer-times?endpoint=56f0f40be4b08c0a4d9c2d1a
