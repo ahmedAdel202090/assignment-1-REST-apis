@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mashape/unirest-php": "^3.0",
+        "facebook/graph-sdk": "^5.7"
+    }
+}
