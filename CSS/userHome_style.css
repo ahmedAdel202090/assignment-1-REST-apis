@@ -1,0 +1,50 @@
+#user_menu{
+    margin-right: 160px;
+}
+#notifincation_menu
+{
+    margin-right: 50px;
+}
+.dropdown-toggle::after {
+    display:none;
+}
+body
+{
+    background-color:#F8F9F9; 
+}
+#user_board
+{
+    overflow: auto;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+.card
+{
+    background-color: rgb(1, 102, 160);
+    color: white;
+    padding: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 5px;
+}
+.card:hover
+{
+    background-color: rgb(2, 84, 131);
+}
+.card:hover #delete_board
+{
+    opacity: 1;
+}
+#add
+{
+    background-color: #E5E9EB;
+    color: rgb(105, 104, 104);
+}
+#delete_board
+{
+    opacity: 0;
+}
+a , a:hover{
+    text-decoration:none;
+    
+}

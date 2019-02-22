@@ -1,0 +1,58 @@
+body
+{
+    overflow: hidden;
+}
+.list-menue
+{
+    min-height:700px;
+    padding: 10px;
+    background-color: #0067A3;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link
+{
+    background-color: white;
+    color: black;
+}
+.nav-pills .nav-link
+{
+    color: white;
+    font-weight: 500;
+}
+.title
+{
+    color: white;
+    font-size:large;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+.table
+{
+    width: 75%;
+    margin: auto;
+}
+.num-boards
+{
+    background-color: rgb(0, 255, 106);
+    border-radius: 20px;
+    height: 150px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+.avg-users
+{
+    border-radius: 20px;
+    margin-left: 5px;
+    background-color: rgb(240, 62, 30);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+.num
+{
+    margin-top:20px;
+    font-size: 2.4rem;
+}
