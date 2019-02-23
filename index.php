@@ -19,7 +19,7 @@ if(isset($_POST["key"]))
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-grid.min.css" />
 </head>
 <body style="background-color:rgba(228, 228, 228, 0.637);">
-    <section style="margin: auto;margin-top:10% ;background-color:white;height: 200px; width: 600px;padding:16px;">
+    <section style="margin: auto;margin-top:10% ;background-color:white;height: 260px; width: 600px;padding:16px;">
         <h5>Welcome to Our Application</h5>
         <br/>
         <?php
@@ -38,6 +38,8 @@ if(isset($_POST["key"]))
         ?>
         <br/><br/>
         <a href="weatherAPI.php" class="btn btn-success">Weather and prayer time</a>
+        <br/><br/>
+        <a href="jokes.php" class="btn btn-success">Get Random Joke</a>
     </section>
 
 </body>
