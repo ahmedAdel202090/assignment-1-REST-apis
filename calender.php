@@ -17,6 +17,11 @@ if(isset($_POST["delete"]) && isset($_POST["id"]))
 {
     $trello->DeleteBoard($_POST["id"],$token,$key);
 }
+
+if(isset($_POST["bm"]) && isset($_POST["id"]))
+{
+    $trello->getBoardMembers($_POST["id"],$token,$key);
+}
 if(isset($_POST["board_color"]) && isset($_POST["board_name"]))
 {
     $created=$trello->CreateBoard($_POST["board_name"],$_POST["board_color"],$token,$key);
@@ -44,6 +49,7 @@ $boards=$trello->getAllBoards($token,$key);
                     <th scope="col">#</th>
                     <th scope="col">Board</th>
                     <th scope="col">Delete</th>
+                    <th scope="col">Board Members</th>
                 </tr>
             </thead>
             <tbody>
@@ -57,6 +63,11 @@ $boards=$trello->getAllBoards($token,$key);
                         <form method="POST" action="">
                             <input type="hidden" name="id" value="'.$value->id.'">
                             <td><button name="delete" type="submit" class="btn btn-danger">Delete</button></td>
+                        </form>
+                        
+                        <form method="POST" action="">
+                            <input type="hidden" name="id" value="'.$value->id.'">
+                            <td><button name="bm" type="submit" class="btn btn-danger">Board Members</button></td>
                         </form>
                     </tr>';
                     $cn++;

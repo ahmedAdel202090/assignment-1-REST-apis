@@ -69,7 +69,45 @@ class TrelloApi
         }
         return true;
     }
+    function getBoardMembers($id, $token, $key)
+    {
+        $curl = curl_init();
 
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "https://api.trello.com/1/boards/{$id}?key={$key}&token={$token}",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 30,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "GET",
+          CURLOPT_POSTFIELDS => "",
+        ));
+
+        $response = curl_exec($curl);
+     
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+          return false;
+        } else {
+          // echo $response;
+            $json = json_decode($response, true);
+            $boardId = $json["id"];
+            $boardName = $json["name"];
+            $boardUrl = $json["url"];
+            $boardPermission = $json["prefs"]["permissionLevel"];
+            $invitations = $json["prefs"]["invitations"];
+            $calendarFeedEnabled = $json["prefs"]["calendarFeedEnabled"];
+            $background = $json["prefs"]["background"];
+            $labelNames = $json["labelNames"];
+            
+            return true;
+        }
+}
+    
 }
 class AthanApi
 {
