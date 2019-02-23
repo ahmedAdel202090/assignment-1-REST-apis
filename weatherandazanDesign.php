@@ -22,13 +22,13 @@ class azanDesign
 {
     function designAzan($Fajr,$Sunrise,$Dhuhr,$Asr,$Maghrib,$Isha)
     {
-        echo  '<div class="container"><h1 class="badge badge-primary" style="font-size: 2rem;">prey times </h1>';
+        echo  '<div class="container"><h1 class="badge badge-primary" style="font-size: 2rem;">Pray times </h1>';
         echo '<br>';
         echo '<h3 class="badge badge-secondary" style="font-size: 1.2rem;">Fajr '.$Fajr.'</h3>' ;
         echo '<br>';
         echo '<h3 class="badge badge-secondary" style="font-size: 1.2rem;">Sunrise '.$Sunrise.'</h3>' ;
         echo '<br>';
-        echo '<h3 class="badge badge-secondary" style="font-size: 1.2rem;">Dhuhr '.$Dhuhr.'</h3>' ;
+        echo '<h3 class="badge badge-secondary" style="font-size: 1.2rem;">Duhr '.$Dhuhr.'</h3>' ;
         echo '<br>';
         echo '<h3 class="badge badge-secondary" style="font-size: 1.2rem;">Asr '.$Asr.'</h3>' ;
         echo '<br>';
