@@ -2,8 +2,9 @@
 session_start();
 if(isset($_POST["key"]))
 {
+  $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
   $_SESSION["key"]=$_POST["key"];
-  $url_token="https://trello.com/1/authorize?expiration=1day&name=MyPersonalToken&scope=read,write,account&response_type=token&key={$_SESSION['key']}8&return_url=http://localhost/assignment%201-REST%20apis/approve_token.html&name=Calender-app";
+  $url_token="https://trello.com/1/authorize?expiration=1day&name=MyPersonalToken&scope=read,write,account&response_type=token&key={$_SESSION['key']}&return_url=".$actual_link."/approve_token.html&name=Calender-app";
   header("location:".$url_token);
 }
 ?>
