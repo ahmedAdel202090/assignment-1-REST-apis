@@ -93,17 +93,7 @@ class TrelloApi
         if ($err) {
           return false;
         } else {
-          // echo $response;
             $json = json_decode($response, true);
-            // $boardId = $json["id"];
-            // $boardName = $json["name"];
-            // $boardUrl = $json["url"];
-            // $boardPermission = $json["prefs"]["permissionLevel"];
-            // $invitations = $json["prefs"]["invitations"];
-            // $calendarFeedEnabled = $json["prefs"]["calendarFeedEnabled"];
-            // $background = $json["prefs"]["background"];
-            // $labelNames = $json["labelNames"];
-            
             return $json;
         }
     }
