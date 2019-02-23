@@ -3,6 +3,7 @@ session_start();
 require_once 'ApisServices.php';
 $token=null;
 $key=null;
+$idd = null;
 if(isset($_SESSION["token"]) && isset($_SESSION["key"]))
 {
     $token=$_SESSION["token"];
@@ -13,6 +14,7 @@ else
     header("location:index.php");
 }
 $trello=new TrelloApi();
+
 if(isset($_POST["delete"]) && isset($_POST["id"]))
 {
     $trello->DeleteBoard($_POST["id"],$token,$key);
@@ -20,7 +22,8 @@ if(isset($_POST["delete"]) && isset($_POST["id"]))
 
 if(isset($_POST["bm"]) && isset($_POST["id"]))
 {
-    $trello->getBoardMembers($_POST["id"],$token,$key);
+    $idd=$_POST["id"];
+    header("location:boardMembers.php?id=$idd");
 }
 if(isset($_POST["board_color"]) && isset($_POST["board_name"]))
 {

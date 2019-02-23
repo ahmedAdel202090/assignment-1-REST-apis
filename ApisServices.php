@@ -25,7 +25,7 @@ class TrelloApi
         return $result;
 
     }
-    function CreateBoard($name,$color,$token,$key)
+    function CreateBoard($name,$color,$token, $key)
     {
         $name=urlencode($name);
         $url="https://api.trello.com/1/boards/?name={$name}&defaultLabels=true&defaultLists=true&keepFromSource=none&prefs_permissionLevel=private&prefs_voting=disabled&prefs_comments=members&prefs_invitations=members&prefs_selfJoin=true&prefs_cardCovers=true&prefs_background={$color}&prefs_cardAging=regular&key={$key}&token={$token}";
@@ -93,20 +93,10 @@ class TrelloApi
         if ($err) {
           return false;
         } else {
-          // echo $response;
             $json = json_decode($response, true);
-            $boardId = $json["id"];
-            $boardName = $json["name"];
-            $boardUrl = $json["url"];
-            $boardPermission = $json["prefs"]["permissionLevel"];
-            $invitations = $json["prefs"]["invitations"];
-            $calendarFeedEnabled = $json["prefs"]["calendarFeedEnabled"];
-            $background = $json["prefs"]["background"];
-            $labelNames = $json["labelNames"];
-            
-            return true;
+            return $json;
         }
-}
+    }
     
 }
 class AthanApi
