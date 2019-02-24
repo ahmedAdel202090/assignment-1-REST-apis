@@ -5,7 +5,7 @@
      
 - This app was programmed in *PHP*.
 
-- It's *local host* site, so you will need *xampp* or another web server to run this project, you need need to put the folder in htdocs or you can use commands to access it from other directory.
+- It's *local host* site, so you will need *xampp* or another web server to run this project, you need to put the folder in htdocs or you can use commands to access it from other directory.
 
 Our Application supports *4* different *APIs*: -
      
