@@ -1,7 +1,7 @@
 # assignment-1-REST-apis
 Our Application supports *4* different *APIs*: -
 
-     ***Github repository:*** https://github.com/ahmedAdel202090/assignment-1-REST-apis
+     Github repository: https://github.com/ahmedAdel202090/assignment-1-REST-apis
      
 1.	Trello ***Calendar***: -
 
