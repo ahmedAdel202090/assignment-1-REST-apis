@@ -12,7 +12,7 @@ o	User enter city and country:
 	Get Athan time for all Prayers (Fajr, Zuhr, Asr and …).
 3.	***Jokes*** API:-
 o	It’s an API to get random jokes.
-In this project we used 3 different requests which are POST, GET and Delete.
+In this project we used 3 different requests which are *POST*, *GET* and *Delete*.
 
 **Trello API:** https://api.trello.com/1/
 **Athan API:** https://aladhan.com/prayer-times-api
