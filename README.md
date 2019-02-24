@@ -3,7 +3,7 @@
 
 ***Github repository: https://github.com/ahmedAdel202090/assignment-1-REST-apis***
      
-- This qpp was programmed in *PHP*.
+- This app was programmed in *PHP*.
 
 - It's *local host* site, so you will need *xampp* or another web server to run this project, you need need to put the folder in htdocs or you can use commands to access it from other directory.
 
