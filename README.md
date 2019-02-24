@@ -13,3 +13,8 @@ o	User enter city and country:
 3.	***Jokes*** API:-
 o	It’s an API to get random jokes.
 In this project we used 3 different requests which are POST, GET and Delete.
+
+**Trello API: ** https://api.trello.com/1/
+**Athan API: ** https://aladhan.com/prayer-times-api
+**Weather API: ** https://api.openweathermap.org/
+**Jokes API: ** http://www.icndb.com/api/
