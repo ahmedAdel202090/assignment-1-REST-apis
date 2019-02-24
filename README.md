@@ -25,7 +25,7 @@ Our Application supports *4* different *APIs*: -
 
 ***In this project we used 3 different requests which are *POST*, *GET* and *DELETE*.***
 
-**Trello API:** https://api.trello.com/1/
+**Trello API:** https://api.trello.com/
 
 **Athan API:** https://aladhan.com/prayer-times-api
 
