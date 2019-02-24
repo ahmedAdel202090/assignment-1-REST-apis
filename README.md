@@ -5,7 +5,7 @@ Our Application supports *4* different *APIs*: -
      
 1.	Trello ***Calendar***: -
 
-    o	You should have an email account on Trello to get access to the calendar. The app will ask the user for permission and then can         use the app easily.
+    o	You should have an email account on Trello to get access to the calendar. The app will ask the user for permission and then can           use the app easily.
 
     o	You should get API key and put it into field and submit.
 
@@ -17,7 +17,7 @@ Our Application supports *4* different *APIs*: -
 
     o	User enter city and country:
 
-        	 Get its weather description, temperature, pressure and humidity.
+        	Get its weather description, temperature, pressure and humidity.
 
         	Get Athan time for all Prayers (Fajr, Zuhr, Asr and …).
 
