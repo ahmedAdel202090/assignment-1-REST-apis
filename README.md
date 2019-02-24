@@ -1,7 +1,13 @@
 # assignment-1-REST-apis
-Our Application supports *4* different *APIs*: -
+
 
 ***Github repository: https://github.com/ahmedAdel202090/assignment-1-REST-apis***
+     
+This APP was written in *PHP* programming language.
+
+It's *local host* site, so you will need *xampp* or another web server to run this project, you need need to put the folder in htdocs or you can use commands to access it from other directory.
+
+Our Application supports *4* different *APIs*: -
      
 1.	Trello ***Calendar***: -
 
